@@ -1,0 +1,55 @@
+.button_bar{
+    -fx-background-color: red;
+    -fx-background-radius: 20
+
+}
+.design{
+    -fx-background-color:linear-gradient(from 25% 25% to 100% 100%,#0B1E3E, #4E154C);
+}
+.design_pro{
+    -fx-background-color:linear-gradient(from 25% 25% to 100% 100%,#085A89, #4E154C);
+}
+.transparent{
+    -fx-background-color:rgba(0,0,0,0);
+}
+.search_field{
+    -fx-background-color: #787A8F;
+    -fx-background-radius: 50;
+}
+.table{
+    -fx-background-color:linear-gradient(from 25% 25% to 100% 100%,#00BFFF, #7B68EE);
+}
+.text-field:hover {
+    -fx-background-color: #00BFFF;
+    -fx-background-radius: 30 30 30 30;
+}
+.button:hover {
+    -fx-background-color: #00BFFF;
+    -fx-background-radius: 30 30 30 30;
+}
+.pick:hover {
+    -fx-background-color: #00BFFF;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: black;
+}
+.start{
+    -fx-background-color: #7B68EE;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+}
+.list-cell{
+    -fx-background-color:grey;
+}
+.list-cell:hover{
+    -fx-background-color:#00BFFF;
+}
+.list-cell:selected{
+    -fx-background-color:#7B68EE;
+}
+.button:pressed {
+    -fx-background-color: #004080;
+}
+
+

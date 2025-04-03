@@ -1,0 +1,51 @@
+14:20:55.661 [main] INFO  program.telephone.Main - Запуска main
+14:20:55.677 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+14:20:57.188 [JavaFX Application Thread] INFO  program.telephone.Menu - Завершение работы приложения
+14:51:23.554 [main] INFO  program.telephone.Main - Запуска main
+14:51:23.570 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+14:51:24.590 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+14:51:24.596 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+14:51:24.658 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+14:51:24.658 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+14:51:24.665 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+14:51:24.666 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+14:51:24.666 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@7203e9e8
+14:51:24.666 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+14:51:24.666 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+14:51:25.811 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+14:51:26.165 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощьюе метода addContact
+14:51:26.181 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Вызов окна добавления контакта 
+14:51:30.315 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Попытка добавить уже существующий контакт: sss
+14:52:08.795 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber 
+14:52:08.796 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Попытка редактирования без выбранного контакта или номера
+14:52:11.687 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber 
+14:52:11.687 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Попытка редактирования без выбранного контакта или номера
+14:52:16.682 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+14:52:18.205 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Отмена добавление контакта
+14:52:18.205 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Отмена добавление контакта
+14:52:25.830 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber 
+14:52:27.521 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+14:52:28.362 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле.Введены недопустимые символы: 'a'
+14:52:30.096 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 123 (тип: Мобильный)
+14:52:30.101 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Обработка результата диалога
+14:52:30.102 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Попытка добавить уже существующий номер: 123
+15:35:26.258 [main] INFO  program.telephone.Main - Запуска main
+15:35:26.271 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+16:11:17.275 [main] INFO  program.telephone.Main - Запуска main
+16:11:17.290 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+16:11:18.650 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+16:11:18.650 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+16:11:18.717 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+16:11:18.718 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+16:11:18.729 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+16:11:18.730 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+16:11:18.730 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@7203e9e8
+16:11:18.730 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+16:11:18.730 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+16:11:19.876 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+16:41:32.276 [main] INFO  program.telephone.Main - Запуска main
+16:41:32.290 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+16:41:35.222 [JavaFX Application Thread] INFO  program.telephone.Menu - Завершение работы приложения
+16:46:07.958 [main] INFO  program.telephone.Main - Запуска main
+16:46:07.974 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+16:46:10.538 [JavaFX Application Thread] INFO  program.telephone.Menu - Завершение работы приложения
