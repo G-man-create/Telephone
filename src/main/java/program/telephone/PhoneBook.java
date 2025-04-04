@@ -3,6 +3,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
@@ -33,6 +34,12 @@ public class PhoneBook {
     private ListView<PhoneNumber> numberData;
 
     private ObservableList<Contact> contacts;
+
+    @FXML private TextField contactNameField;
+
+    @FXML private TextField numberField;
+
+    @FXML private ComboBox<String> typeComboBox;
 
     private static final String DATA_BIN  = "phonebook.bin";
     /**
@@ -114,6 +121,77 @@ public class PhoneBook {
             return FXCollections.observableArrayList();
         }
     }
+    private enum DialogType {
+        CONTACT_DIALOG,
+        NUMBER_DIALOG
+    }
+
+    private <T> Optional<T> showDialog(String title, DialogType type, T initialData) {
+        try {
+            String fxmlFile;
+            switch (type) {
+                case CONTACT_DIALOG:
+                    fxmlFile = "contact-dialog.fxml";
+                    break;
+                case NUMBER_DIALOG:
+                    fxmlFile = "number-dialog.fxml";
+                    break;
+                default:
+                    return Optional.empty();
+            }
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            DialogPane dialogPane = loader.load();
+
+            Dialog<T> dialog = new Dialog<>();
+            dialog.setDialogPane(dialogPane);
+            dialog.setTitle(title);
+
+            Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
+
+            dialog.setResultConverter(buttonType -> {
+                if (buttonType == ButtonType.OK) {
+                    switch (type) {
+                        case CONTACT_DIALOG:
+                            TextField nameField = (TextField) dialogPane.lookup("#nameField");
+                            return (T) nameField.getText();
+                        case NUMBER_DIALOG:
+                            TextField numberField = (TextField) dialogPane.lookup("#numberField");
+                            ComboBox<String> typeComboBox = (ComboBox<String>) dialogPane.lookup("#typeComboBox");
+                            return (T) new PhoneNumber(numberField.getText(), typeComboBox.getValue());
+                    }
+                }
+                return null;
+            });
+            switch (type) {
+                case CONTACT_DIALOG:
+                    TextField nameField = (TextField) dialogPane.lookup("#nameField");
+                    nameField.setText((String) initialData);
+                    nameField.textProperty().addListener((observable, oldValue, newValue) -> {
+                        if (!newValue.matches("[а-яА-Яa-zA-Z ]*")) {
+                            nameField.setText(oldValue);
+                        }
+                    });
+                    break;
+                case NUMBER_DIALOG:
+                    PhoneNumber phoneNumber = (PhoneNumber) initialData;
+                    TextField numberField = (TextField) dialogPane.lookup("#numberField");
+                    ComboBox<String> typeComboBox = (ComboBox<String>) dialogPane.lookup("#typeComboBox");
+                    numberField.setText(phoneNumber.getNumber());
+                    typeComboBox.setValue(phoneNumber.getType());
+                    allowOnlyNumbers(numberField);
+                    break;
+            }
+
+            return dialog.showAndWait();
+        } catch (IOException e) {
+            logger.error("Ошибка при загрузке диалога", e);
+            return Optional.empty();
+        }
+    }
+
+
     /**
      * Добавляет новый контакт в телефонную книгу.
      * Функции:
@@ -124,49 +202,24 @@ public class PhoneBook {
      */
     @FXML
     private void addContact() {
-        logger.info("Добавление контакта с помощьюе метода addContact");
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Добавить контакт");
-        dialog.setHeaderText("Введите ФИО контакта:");
-        try {
-            dialog.getDialogPane().getStylesheets().add(getClass().getResource("style1.css").toExternalForm());
-            dialog.getDialogPane().getStyleClass().add("custom-dialog");
-            Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-            logger.debug("Вызов окна добавления контакта ");
-        } catch (Exception e) {
-            logger.error("Ошибка вызова окна", e);
-        }
-        dialog.getEditor().textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("[а-яА-Яa-zA-Z ]*")) {
-                dialog.getEditor().setText(oldValue);
-            }
+        logger.info("Добавление контакта с помощью метода addContact");
+        showDialog("Добавить контакт", DialogType.CONTACT_DIALOG, "")
+                .ifPresent(name -> {
+                    if (name.toString().isEmpty()) return;
 
-        });
-        Optional<String> result = dialog.showAndWait();
-        result.ifPresent(name -> {
-            boolean exists = contacts.stream()
-                    .anyMatch(c -> c.getName().equalsIgnoreCase(name));
+                    boolean exists = contacts.stream()
+                            .anyMatch(c -> c.getName().equalsIgnoreCase(name.toString()));
 
-            if (exists) {
-                logger.warn("Попытка добавить уже существующий контакт: {}", name);
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Ошибка");
-                alert.setHeaderText("Контакт уже существует");
-                alert.setContentText("Контакт с таким именем уже есть в справочнике");
-                alert.showAndWait();
-            } else {
-                Contact contact = new Contact(name);
-                contacts.add(contact);
-                try {
-                    saveContacts();
-                    logger.info("Контакт {} успешно добавлен и сохранен", name);
-                } catch (Exception e) {
-                    logger.error("Ошибка при сохранении контакта {}", name, e);
-                }
-
-            }
-        });
+                    if (exists) {
+                        logger.warn("Попытка добавить уже существующий контакт: {}", name);
+                        showAlert("Ошибка", "Контакт уже существует", "Контакт с таким именем уже есть в справочнике");
+                    } else {
+                        Contact contact = new Contact(name.toString());
+                        contacts.add(contact);
+                        saveContacts();
+                        logger.info("Контакт {} успешно добавлен и сохранен", name);
+                    }
+                });
     }
     /**
      * Удаляет выбранный контакт из телефонной книги.
@@ -201,64 +254,24 @@ public class PhoneBook {
     private void addNumber() {
         logger.info("Добавление номера с помощью метода addNumber");
         Contact choosecontact = contactData.getSelectionModel().getSelectedItem();
-        if (choosecontact == null) {
-            return;
-        }
-        try {
-            Dialog<PhoneNumber> dialog = new Dialog<>();
-            dialog.setTitle("Добавить номер");
+        if (choosecontact == null) return;
 
-            Label numberLabel = new Label("Номер:");
-            TextField numberField = new TextField();
-            Label typeLabel = new Label("Тип:");
-            ComboBox<String> typeComboBox = new ComboBox<>(FXCollections.observableArrayList("Мобильный", "Рабочий", "Домашний", "Факс"));
-            typeComboBox.getSelectionModel().selectFirst();
-            allowOnlyNumbers(numberField);
-            typeComboBox.getStyleClass().add("combobox");
-            Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-            stage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-            numberField.getStyleClass().add("textfield");
-            GridPane grid = new GridPane();
-            grid.setHgap(10);
-            grid.setVgap(10);
-            grid.add(numberLabel, 0, 0);
-            grid.add(numberField, 1, 0);
-            grid.add(typeLabel, 0, 1);
-            grid.add(typeComboBox, 1, 1);
-            dialog.getDialogPane().setContent(grid);
-            grid.getStyleClass().add("grid");
-            grid.getStylesheets().add(getClass().getResource("style2.css").toExternalForm());
-            dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
-            dialog.setResultConverter(button -> {
-                if (button == ButtonType.OK) {
-                    return new PhoneNumber(numberField.getText(), typeComboBox.getValue());
-                }
-                logger.debug("Отмена добавление контакта");
-                return null;
+        showDialog("Добавить номер", DialogType.NUMBER_DIALOG, new PhoneNumber("", "Мобильный"))
+                .ifPresent(phoneNumber -> {
+                    boolean exists = choosecontact.getPhoneNumbers().stream()
+                            .anyMatch(n -> n.getNumber().equals(phoneNumber.getNumber()));
 
-            });
-            Optional<PhoneNumber> result = dialog.showAndWait();
-            result.ifPresent(phoneNumber -> {
-                logger.debug("Обработка результата диалога");
-                boolean exists = choosecontact.getPhoneNumbers().stream()
-                        .anyMatch(n -> n.getNumber().equals(phoneNumber.getNumber()));
-                if (exists) {
-                    logger.warn("Попытка добавить уже существующий номер: {}", phoneNumber.getNumber());
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Ошибка");
-                    alert.setHeaderText("Номер уже существует");
-                    alert.setContentText("Этот номер уже есть у контакта");
-                    alert.showAndWait();
-                } else {
-                    choosecontact.addPhoneNumber(phoneNumber);
-                    numberData.getItems().add(phoneNumber);
-                    saveContacts();
-                }
-            });
-        } catch (Exception e) {
-            logger.error("Ошибка при добавлении номера", e);
-        }
+                    if (exists) {
+                        logger.warn("Попытка добавить уже существующий номер: {}", phoneNumber.getNumber());
+                        showAlert("Ошибка", "Номер уже существует", "Этот номер уже есть у контакта");
+                    } else {
+                        choosecontact.addPhoneNumber(phoneNumber);
+                        numberData.getItems().add(phoneNumber);
+                        saveContacts();
+                    }
+                });
     }
+
     /**
      * Удаляет выбранный номер телефона у текущего контакта
      * Функции:
@@ -369,68 +382,20 @@ public class PhoneBook {
      * В случае ошибки метод логирует исключение с помощью logger.error()
      */
     @FXML
-    private void editcontact(ActionEvent event) {
-        logger.info("Редактирование контакта с помощью метода editcontact ");
-        try {
-            Contact choosecontact = contactData.getSelectionModel().getSelectedItem();
-            if (choosecontact == null) {
-                return;
-            }
+    private void editnumber() {
+        logger.info("Редактирование номера телефона с помощью метода editnumber");
+        Contact choosecontact = contactData.getSelectionModel().getSelectedItem();
+        PhoneNumber choosenumber = numberData.getSelectionModel().getSelectedItem();
+        if (choosecontact == null || choosenumber == null) return;
 
-            TextInputDialog dialog = new TextInputDialog(choosecontact.getName());
-            dialog.setTitle("Изменить контакт");
-            dialog.setHeaderText("Введите новое ФИО контакта:");
-
-            try {
-                dialog.getDialogPane().getStylesheets().add(getClass().getResource("style1.css").toExternalForm());
-                dialog.getDialogPane().getStyleClass().add("dialog");
-                Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-                stage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-                logger.debug("Диалог редактирования контакта настроен");
-            } catch (Exception e) {
-                logger.error("Ошибка настройки диалогового окна", e);
-            }
-
-            dialog.getEditor().textProperty().addListener((observable, oldValue, newValue) -> {
-                if (!newValue.matches("[а-яА-Яa-zA-Z ]*")) {
-                    dialog.getEditor().setText(oldValue);
-                }
-            });
-
-            Optional<String> result = dialog.showAndWait();
-            result.ifPresent(newName -> {
-                boolean nameExists = contacts.stream()
-                        .filter(contact -> !contact.equals(choosecontact))
-                        .anyMatch(contact -> contact.getName().equalsIgnoreCase(newName.trim()));
-
-                if (nameExists) {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Ошибка");
-                    alert.setHeaderText("Контакт уже существует");
-                    alert.setContentText("Контакт с таким именем уже есть в справочнике");
-
-                    try {
-                        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-                        alertStage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-                        alert.showAndWait();
-                    } catch (Exception e) {
-                        logger.error("Ошибка при отображении предупреждения", e);
-                    }
-                } else {
-                    choosecontact.setName(newName.trim());
-                    contactData.refresh();
+        showDialog("Редактировать номер", DialogType.NUMBER_DIALOG, choosenumber)
+                .ifPresent(newPhoneNumber -> {
+                    choosecontact.getPhoneNumbers().remove(choosenumber);
+                    choosecontact.getPhoneNumbers().add(newPhoneNumber);
+                    numberData.setItems(FXCollections.observableArrayList(choosecontact.getPhoneNumbers()));
                     saveContacts();
-                }
-            });
-
-        } catch (Exception e) {
-            logger.error("Ошибка при редактировании контакта", e);
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Ошибка");
-            alert.setHeaderText("Не удалось изменить контакт");
-            alert.setContentText(e.getMessage());
-            alert.showAndWait();
-        }
+                    logger.info("Номер успешно изменен и сохранен");
+                });
     }
     /**
      * Редактирует выбранный номер телефона.
@@ -443,104 +408,25 @@ public class PhoneBook {
      * В случае ошибки метод логирует исключение с помощью logger.error()
      */
     @FXML
-    private void editnumber(ActionEvent event) {
-        logger.info("Редактирование номера телефона с помощью метода editnumber ");
+    private void editcontact() {
+        logger.info("Редактирование контакта с помощью метода editcontact");
         Contact choosecontact = contactData.getSelectionModel().getSelectedItem();
-        PhoneNumber choosenumber = numberData.getSelectionModel().getSelectedItem();
+        if (choosecontact == null) return;
 
-        if (choosecontact == null || choosenumber == null) {
-            logger.warn("Попытка редактирования без выбранного контакта или номера");
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Ошибка");
-            alert.setHeaderText("Не выбраны контакт или номер");
-            alert.setContentText("Пожалуйста, выберите контакт и номер для редактирования");
-            try {
-                Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-                alertStage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-                alert.showAndWait();
-            } catch (Exception e) {
-                logger.error("Ошибка при отображении предупреждения", e);
-            }
-            return;
-        }
-
-        try {
-            Dialog<PhoneNumber> dialog = new Dialog<>();
-            dialog.setTitle("Редактировать номер");
-            TextField numberField = new TextField(choosenumber.getNumber());
-            ComboBox<String> typeComboBox = new ComboBox<>(
-                    FXCollections.observableArrayList("Мобильный", "Рабочий", "Домашний", "Факс"));
-            typeComboBox.setValue(choosenumber.getType());
-            allowOnlyNumbers(numberField);
-            try {
-                typeComboBox.getStyleClass().add("combobox");
-                numberField.getStyleClass().add("textfield");
-                GridPane grid = new GridPane();
-                grid.setHgap(10);
-                grid.setVgap(10);
-                grid.add(new Label("Номер:"), 0, 0);
-                grid.add(numberField, 1, 0);
-                grid.add(new Label("Тип:"), 0, 1);
-                grid.add(typeComboBox, 1, 1);
-                grid.getStyleClass().add("grid");
-                grid.getStylesheets().add(getClass().getResource("style2.css").toExternalForm());
-                dialog.getDialogPane().setContent(grid);
-                Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-                stage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-            } catch (Exception e) {
-                logger.error("Ошибка настройки диалога", e);
-            }
-
-            dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
-
-            dialog.setResultConverter(button -> {
-                if (button == ButtonType.OK) {
-                    return new PhoneNumber(numberField.getText().trim(), typeComboBox.getValue());
-                }
-                return null;
-            });
-
-            Optional<PhoneNumber> result = dialog.showAndWait();
-            result.ifPresent(newPhoneNumber -> {
-                boolean numberExists = choosecontact.getPhoneNumbers().stream()
-                        .filter(n -> !n.equals(choosenumber))
-                        .anyMatch(n -> n.getNumber().equals(newPhoneNumber.getNumber()));
-
-                if (numberExists) {
-                    logger.warn("Попытка изменить на существующий номер: {}", newPhoneNumber.getNumber());
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Ошибка");
-                    alert.setHeaderText("Номер уже существует");
-                    alert.setContentText("Этот номер уже есть у контакта");
-                    try {
-                        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-                        alertStage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-                        alert.showAndWait();
-                    } catch (Exception e) {
-                        logger.error("Ошибка при отображении предупреждения", e);
-                    }
-                } else {
-                    choosecontact.getPhoneNumbers().remove(choosenumber);
-                    choosecontact.getPhoneNumbers().add(newPhoneNumber);
-                    numberData.setItems(FXCollections.observableArrayList(choosecontact.getPhoneNumbers()));
+        showDialog("Изменить контакт", DialogType.CONTACT_DIALOG, choosecontact.getName())
+                .ifPresent(newName -> {
+                    choosecontact.setName(newName.toString());
+                    contactData.refresh();
                     saveContacts();
-                }
-            });
-
-        } catch (Exception e) {
-            logger.error("Ошибка при редактировании номера", e);
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Ошибка");
-            alert.setHeaderText("Не удалось изменить номер");
-            alert.setContentText(e.getMessage());
-            try {
-                Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-                alertStage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-                alert.showAndWait();
-            } catch (Exception ex) {
-                logger.error("Ошибка при отображении ошибки", ex);
-            }
-        }
+                    logger.info("Контакт успешно обновлен");
+                });
+    }
+    private void showAlert(String title, String header, String content) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
     /**
      * Ограничивает ввод в текстовое поле только цифрами.

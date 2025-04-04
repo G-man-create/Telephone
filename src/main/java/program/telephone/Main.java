@@ -40,6 +40,7 @@ public class Main extends Application {
      * @param args аргументы командной строки
      */
     public static void main(String[] args) {
+        System.setProperty("log4j.configurationFile", "path/to/log4j2.xml");
         logger.info("Запуска main");
         launch(args);
 

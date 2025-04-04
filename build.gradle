@@ -26,7 +26,7 @@ tasks.withType(JavaCompile) {
 
 application {
   mainModule = 'program.telephone'
-  mainClass = 'program.telephone.Launcher'
+  mainClass = 'program.telephone.Main'
 }
 
 javafx {
@@ -39,21 +39,7 @@ dependencies {
   implementation 'org.openjfx:javafx-fxml:17.0.2'
   implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
   implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
-  implementation('org.controlsfx:controlsfx:11.2.1')
-  implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
-    exclude(group: 'org.openjfx')
-  }
-  implementation('net.synedra:validatorfx:0.5.0') {
-    exclude(group: 'org.openjfx')
-  }
-  implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
-  implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
-  implementation('com.github.almasb:fxgl:11.17') {
-    exclude(group: 'org.openjfx')
-  }
-
-  testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+  
 }
 
 test {
@@ -85,4 +71,16 @@ jar {
     configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
   }
   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+run {
+  jvmArgs = [
+          '--module-path', 'C:/javafx-sdk-17.0.14/lib',
+          '--module-path', classpath.asPath,
+          '--add-modules', 'javafx.controls,javafx.fxml,javafx.media',
+          '--add-exports', 'javafx.graphics/com.sun.javafx.application=ALL-UNNAMED'
+  ]
+}
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+  options.compilerArgs += ['--module-path', classpath.asPath]
 }
