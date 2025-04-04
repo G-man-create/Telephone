@@ -178,6 +178,7 @@ public class PhoneBook {
                     PhoneNumber phoneNumber = (PhoneNumber) initialData;
                     TextField numberField = (TextField) dialogPane.lookup("#numberField");
                     ComboBox<String> typeComboBox = (ComboBox<String>) dialogPane.lookup("#typeComboBox");
+
                     numberField.setText(phoneNumber.getNumber());
                     typeComboBox.setValue(phoneNumber.getType());
                     allowOnlyNumbers(numberField);
@@ -258,6 +259,15 @@ public class PhoneBook {
 
         showDialog("Добавить номер", DialogType.NUMBER_DIALOG, new PhoneNumber("", "Мобильный"))
                 .ifPresent(phoneNumber -> {
+                    // Проверка номера в зависимости от типа
+                    if (!isValidPhoneNumber(phoneNumber.getNumber(), phoneNumber.getType())) {
+                        logger.warn("Некорректный номер телефона: {} для типа {}",
+                                phoneNumber.getNumber(), phoneNumber.getType());
+                        showAlert("Ошибка", "Некорректный номер",
+                                "Номер не соответствует формату для выбранного типа");
+                        return;
+                    }
+
                     boolean exists = choosecontact.getPhoneNumbers().stream()
                             .anyMatch(n -> n.getNumber().equals(phoneNumber.getNumber()));
 
@@ -270,6 +280,31 @@ public class PhoneBook {
                         saveContacts();
                     }
                 });
+    }
+
+    // Метод для проверки номера телефона в зависимости от типа
+    private boolean isValidPhoneNumber(String number, String type) {
+        if (number == null || number.isEmpty()) {
+            return false;
+        }
+
+        // Удаляем все нецифровые символы для проверки
+        String cleanNumber = number.replaceAll("[^0-9]", "");
+
+        switch(type) {
+            case "Мобильный":
+                // Проверяем что номер начинается с 7 или 8 и имеет 11 цифр
+                return cleanNumber.matches("^[78]\\d{10}$");
+            case "Домашний":
+                // Домашние номера обычно короче, проверяем 6-7 цифр
+                return cleanNumber.matches("^\\d{6,7}$");
+            case "Рабочий":
+                // Рабочие номера могут быть длиннее
+                return cleanNumber.matches("^\\d{6,11}$");
+            default:
+                // Для других типов применяем общие правила
+                return cleanNumber.matches("^\\d{6,11}$");
+        }
     }
 
     /**
@@ -390,6 +425,15 @@ public class PhoneBook {
 
         showDialog("Редактировать номер", DialogType.NUMBER_DIALOG, choosenumber)
                 .ifPresent(newPhoneNumber -> {
+                    // Проверка номера
+                    if (!isValidPhoneNumber(newPhoneNumber.getNumber(), newPhoneNumber.getType())) {
+                        logger.warn("Некорректный номер телефона: {} для типа {}",
+                                newPhoneNumber.getNumber(), newPhoneNumber.getType());
+                        showAlert("Ошибка", "Некорректный номер",
+                                "Номер не соответствует формату для выбранного типа");
+                        return;
+                    }
+
                     choosecontact.getPhoneNumbers().remove(choosenumber);
                     choosecontact.getPhoneNumbers().add(newPhoneNumber);
                     numberData.setItems(FXCollections.observableArrayList(choosecontact.getPhoneNumbers()));
@@ -434,13 +478,12 @@ public class PhoneBook {
      */
     private void allowOnlyNumbers(TextField textField) {
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("\\d*")) {
-                logger.debug("Неправильный ввод в текстовом поле.Введены недопустимые символы: '{}'",
+            if (!newValue.matches("^[+]?\\d*")) {
+                logger.debug("Неправильный ввод в текстовом поле. Введены недопустимые символы: '{}'",
                         newValue);
                 textField.setText(oldValue);
             }
         });
-
     }
     /**
      *  Этот метод обеспечивает связь между телефонной книгой и главным меню приложения
