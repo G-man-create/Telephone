@@ -1067,3 +1067,341 @@ javafx.fxml.LoadException: FXCollections is not a valid type.
 21:37:07.044 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
 21:37:07.045 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
 21:37:07.046 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:11.471 [main] INFO  program.telephone.Main - Запуска main
+21:58:11.484 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+21:58:12.716 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+21:58:12.717 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+21:58:12.773 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+21:58:12.773 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+21:58:12.780 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+21:58:12.781 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+21:58:12.782 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@2f61a884
+21:58:12.782 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+21:58:12.782 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+21:58:13.933 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+21:58:17.067 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:58:17.292 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:58:17.478 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:58:17.631 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:58:17.729 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:58:18.875 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:58:26.487 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:26.487 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:26.488 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:26.490 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:26.490 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:26.674 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:26.675 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:26.675 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:26.676 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:26.676 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:28.006 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:28.006 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:28.008 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:28.008 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:28.009 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:29.705 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:29.705 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:29.705 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:29.705 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:29.705 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:31.264 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:31.265 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:31.265 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:31.265 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:31.265 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:31.492 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:31.493 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:31.493 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:31.495 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:31.495 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:31.690 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:31.690 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:31.690 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:31.691 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:31.691 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:31.851 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:58:31.851 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:58:31.851 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:58:31.852 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:58:31.852 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:58:56.791 [main] INFO  program.telephone.Main - Запуска main
+21:58:56.806 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+21:58:58.236 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+21:58:58.237 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+21:58:58.287 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+21:58:58.287 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+21:58:58.294 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+21:58:58.294 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+21:58:58.294 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@43bae7fa
+21:58:58.294 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+21:58:58.294 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+21:58:59.444 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+21:59:02.283 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+21:59:09.974 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:59:09.975 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:59:09.976 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:59:09.977 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:59:09.977 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:59:13.951 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:59:13.951 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:59:13.953 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:59:13.953 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:59:13.953 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:59:15.623 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:59:15.623 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:59:15.624 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:59:15.624 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:59:15.624 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:59:17.674 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+21:59:17.674 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:59:17.674 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:59:17.675 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:59:17.675 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+21:59:19.772 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Возращение в меню
+21:59:19.772 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: menu.fxml
+21:59:19.776 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для меню
+21:59:19.776 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+21:59:19.778 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешное переключение
+21:59:20.790 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+21:59:21.058 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+21:59:21.058 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+21:59:21.078 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+21:59:21.078 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+21:59:21.078 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+21:59:21.078 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+21:59:21.078 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@515d1b85
+21:59:21.078 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+21:59:21.078 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+21:59:22.103 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+21:59:24.986 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+21:59:32.966 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: ааа
+21:59:32.967 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+21:59:32.967 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+21:59:32.967 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+21:59:32.968 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт ааа успешно добавлен и сохранен
+21:59:34.844 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+21:59:41.640 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Попытка добавить уже существующий контакт: ааа
+22:01:00.821 [main] INFO  program.telephone.Main - Запуска main
+22:01:00.837 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+22:01:01.923 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+22:01:01.923 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+22:01:01.983 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+22:01:01.983 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+22:01:01.988 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+22:01:01.989 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+22:01:01.989 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@635c3eb8
+22:01:01.989 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+22:01:01.989 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:01:03.127 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:01:05.083 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+22:01:05.083 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+22:01:09.873 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 34234 (тип: Другой)
+22:01:09.881 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный номер телефона: 34234 для типа Другой
+22:01:12.386 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+22:01:12.387 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+22:01:15.645 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 777777 (тип: Мобильный)
+22:01:15.651 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный номер телефона: 777777 для типа Мобильный
+22:01:17.478 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+22:01:17.478 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+22:01:21.903 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 77777777 (тип: Другой)
+22:01:21.911 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 77777777 (тип: Другой)
+22:01:21.911 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:01:21.912 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:01:21.915 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:01:24.801 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление номера с помощью метода removeNumber
+22:01:24.801 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Номер телефона успешно удален
+22:01:24.801 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:01:24.801 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:01:24.802 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:01:24.802 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение изменения
+22:01:40.610 [main] INFO  program.telephone.Main - Запуска main
+22:01:40.625 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+22:01:41.793 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+22:01:41.794 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+22:01:41.853 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+22:01:41.853 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+22:01:41.860 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+22:01:41.861 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+22:01:41.861 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@635c3eb8
+22:01:41.861 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+22:01:41.861 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:01:43.004 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:01:44.445 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление контакта с помощью метода removeContact
+22:01:44.445 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:01:44.446 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:01:44.447 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:01:44.447 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Контакт успешно удален
+22:01:49.019 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+22:01:51.349 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: фффф
+22:01:51.351 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:01:51.351 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:01:51.351 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:01:51.352 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт фффф успешно добавлен и сохранен
+22:01:51.960 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+22:01:53.834 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: аааа
+22:01:53.834 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:01:53.834 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:01:53.834 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:01:53.835 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт аааа успешно добавлен и сохранен
+22:01:54.531 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:01:54.533 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:01:56.118 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+22:01:58.407 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: ыфвыфв
+22:01:58.407 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:01:58.408 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:01:58.408 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:01:58.408 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт ыфвыфв успешно добавлен и сохранен
+22:14:00.133 [main] INFO  program.telephone.Main - Запуска main
+22:14:00.148 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+22:14:01.491 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+22:14:01.492 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+22:14:01.543 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+22:14:01.543 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+22:14:01.549 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+22:14:01.551 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+22:14:01.551 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@635c3eb8
+22:14:01.551 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+22:14:01.551 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:14:02.696 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:14:04.590 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:14:04.850 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:14:05.037 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:14:05.253 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:14:06.739 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:14:07.259 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+22:14:09.861 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: фывыф
+22:14:09.862 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:14:09.862 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:14:09.863 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:14:09.863 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт фывыф успешно добавлен и сохранен
+22:19:34.224 [main] INFO  program.telephone.Main - Запуска main
+22:19:34.238 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+22:19:35.430 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+22:19:35.431 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+22:19:35.493 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+22:19:35.493 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+22:19:35.500 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+22:19:35.502 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+22:19:35.502 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@635c3eb8
+22:19:35.502 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+22:19:35.502 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:19:36.643 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:19:37.737 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:19:37.943 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:19:38.122 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:19:39.555 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Поиск котактов и номеров с помощью метода Search
+22:19:39.953 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+22:19:42.016 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: dfad
+22:19:42.016 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:19:42.017 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:19:42.018 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:19:42.018 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт dfad успешно добавлен и сохранен
+22:19:42.881 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:19:42.883 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:19:45.530 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:19:45.530 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:19:47.706 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление контакта с помощью метода addContact
+22:19:48.985 [JavaFX Application Thread] DEBUG program.telephone.Contact - Создан новый контакт: asdsa
+22:19:48.985 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:19:48.986 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:19:48.986 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:19:48.986 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакт asdsa успешно добавлен и сохранен
+22:20:24.899 [main] INFO  program.telephone.Main - Запуска main
+22:20:24.913 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+22:20:26.302 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+22:20:26.303 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+22:20:26.357 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+22:20:26.357 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+22:20:26.362 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+22:20:26.363 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+22:20:26.363 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@635c3eb8
+22:20:26.363 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+22:20:26.363 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:20:27.508 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:20:29.215 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Возращение в меню
+22:20:29.215 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: menu.fxml
+22:20:29.221 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для меню
+22:20:29.221 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:20:29.221 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешное переключение
+22:20:30.236 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:21:31.507 [main] INFO  program.telephone.Main - Запуска main
+22:21:31.524 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+22:21:32.719 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+22:21:32.720 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+22:21:32.777 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+22:21:32.777 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+22:21:32.782 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+22:21:32.783 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+22:21:32.783 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@635c3eb8
+22:21:32.783 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+22:21:32.783 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:21:33.930 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+22:21:49.689 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+22:21:49.690 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+22:21:55.888 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 23432434 (тип: Другой)
+22:21:55.896 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 23432434 (тип: Другой)
+22:21:55.896 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:21:55.897 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:21:55.899 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:21:57.900 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber
+22:21:59.860 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 2343243433333 (тип: Другой)
+22:21:59.868 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный номер телефона: 2343243433333 для типа Другой
+22:22:02.648 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber
+22:22:05.299 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 23432438 (тип: Другой)
+22:22:05.306 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+22:22:05.306 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+22:22:05.307 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+22:22:05.307 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Номер успешно изменен и сохранен
+22:22:07.746 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:07.748 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:08.994 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:08.995 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:09.505 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:09.506 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:09.760 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:09.760 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:10.003 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:10.003 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:10.189 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:10.189 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:10.379 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:10.380 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:10.571 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:10.571 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:10.751 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:10.751 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:10.979 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:10.979 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:11.156 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:11.156 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:11.328 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:11.328 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:11.513 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:11.513 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:11.717 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:11.717 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:12.259 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:12.260 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:12.846 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:12.846 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:13.327 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:13.327 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:13.648 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:13.648 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:13.837 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:13.837 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:13.976 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:13.976 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:14.293 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:14.293 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:14.462 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:14.462 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по убыванию (Я-А)
+22:22:14.624 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Запуск сортировки контактов
+22:22:14.624 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Применена сортировка по возрастанию (А-Я)
+22:22:17.243 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Возращение в меню
+22:22:17.243 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: menu.fxml
+22:22:17.248 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для меню
+22:22:17.248 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+22:22:17.248 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешное переключение
+22:22:18.257 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена

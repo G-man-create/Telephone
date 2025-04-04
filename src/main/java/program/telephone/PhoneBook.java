@@ -235,7 +235,10 @@ public class PhoneBook {
         logger.info("Удаление контакта с помощью метода removeContact");
         Contact choosecontact = contactData.getSelectionModel().getSelectedItem();
         if (choosecontact != null) {
+            // Удаляем контакт из ObservableList
             contacts.remove(choosecontact);
+            // Очищаем selection, чтобы обновить numberData
+            contactData.getSelectionModel().clearSelection();
             saveContacts();
             logger.debug("Контакт успешно удален");
         }
@@ -368,7 +371,8 @@ public class PhoneBook {
                 logger.info("Применена сортировка по возрастанию (А-Я)");
             }
 
-            contactData.setItems(FXCollections.observableArrayList(sorted));
+            // Очищаем и добавляем отсортированные элементы
+            contactData.getItems().setAll(sorted);
         } catch (Exception e) {
             logger.error("Ошибка при сортировке контактов", e);
             throw e;
@@ -384,7 +388,7 @@ public class PhoneBook {
         logger.info("Поиск котактов и номеров с помощью метода Search");
         String request = searchField.getText().toLowerCase().trim();
         if (request.isEmpty()) {
-            contactData.setItems(FXCollections.observableArrayList(contacts));
+            contactData.setItems(contacts);
             return;
         }
 
