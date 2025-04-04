@@ -139,19 +139,19 @@ public class PhoneBook {
                 default:
                     return Optional.empty();
             }
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             DialogPane dialogPane = loader.load();
-
             Dialog<T> dialog = new Dialog<>();
             dialog.setDialogPane(dialogPane);
             dialog.setTitle(title);
 
             Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
             stage.getIcons().add(new Image(getClass().getResourceAsStream("telephone.png")));
-
+            dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+            Button okButton = (Button) dialog.getDialogPane().lookupButton(ButtonType.OK);
+            okButton.setDefaultButton(true);
             dialog.setResultConverter(buttonType -> {
-                if (buttonType == ButtonType.OK) {
+                if (buttonType == ButtonType.OK)  {
                     switch (type) {
                         case CONTACT_DIALOG:
                             TextField nameField = (TextField) dialogPane.lookup("#nameField");

@@ -11,8 +11,4 @@
             <ComboBox fx:id="typeComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
         </GridPane>
     </content>
-    <buttonTypes>
-        <ButtonType text="OK" buttonData="OK_DONE"/>
-        <ButtonType text="Cancel" buttonData="CANCEL_CLOSE"/>
-    </buttonTypes>
 </DialogPane>
