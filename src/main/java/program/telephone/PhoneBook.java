@@ -35,12 +35,6 @@ public class PhoneBook {
 
     private ObservableList<Contact> contacts;
 
-    @FXML private TextField contactNameField;
-
-    @FXML private TextField numberField;
-
-    @FXML private ComboBox<String> typeComboBox;
-
     private static final String DATA_BIN  = "phonebook.bin";
     /**
      * Инициализирует данные телефонной книги.
