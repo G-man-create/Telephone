@@ -15,7 +15,6 @@ sourceCompatibility = '16'
 targetCompatibility = '16'
 
 application {
-  mainModule = 'program.telephone'
   mainClass = 'program.telephone.Main'
 }
 
