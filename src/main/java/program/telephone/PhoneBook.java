@@ -36,6 +36,16 @@ public class PhoneBook {
     private ObservableList<Contact> contacts;
 
     private static final String DATA_BIN  = "phonebook.bin";
+
+    public static void initDataFile() throws IOException {
+        File dataFile = new File(DATA_BIN);
+        if (!dataFile.exists()) {
+            dataFile.createNewFile();
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(dataFile))) {
+                oos.writeObject(new ArrayList<Contact>());
+            }
+        }
+    }
     /**
      * Инициализирует данные телефонной книги.
      * Метод выполняет следующие действия:Загружает список контактов из файла
@@ -48,6 +58,7 @@ public class PhoneBook {
     public void initialize()  {
         try {
             logger.info("Инициализация данных о контактах");
+            PhoneBook.initDataFile();
             contacts = FXCollections.observableArrayList(loadContacts());
             contactData.setItems(contacts);
             contactData.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -61,7 +72,6 @@ public class PhoneBook {
             logger.info("Инициализация успешно завершена");
         } catch (Exception e) {
             logger.error("Ошибка при инициализации: ", e);
-            throw e;
         }
     }
     /**
@@ -96,22 +106,11 @@ public class PhoneBook {
      * В случае ошибки метод логирует исключение с помощью logger.error()
      */
     @FXML
-    private  ObservableList<Contact> loadContacts() {
-        logger.info("Загрузка данных с помощью метода loadContacts");
+    private ObservableList<Contact> loadContacts() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(DATA_BIN))) {
-            List<Contact> loaded = (ArrayList<Contact>) ois.readObject();
-            logger.info("Успешная загрузка");
-
-            return FXCollections.observableArrayList(
-                    loaded.stream()
-                            .filter(Objects::nonNull)
-                            .collect(Collectors.toList())
-            );
-        } catch (IOException e) {
-            logger.error("Ошибка при загрузке контактов из файла: {}", e.getMessage(), e);
-            return FXCollections.observableArrayList();
-        } catch (ClassNotFoundException e) {
-            logger.error("Класс не найден при загрузке контактов: {}", e.getMessage(), e);
+            return FXCollections.observableArrayList((List<Contact>) ois.readObject());
+        } catch (IOException | ClassNotFoundException e) {
+            logger.error("Ошибка загрузки", e);
             return FXCollections.observableArrayList();
         }
     }
