@@ -253,7 +253,7 @@ public class PhoneBook {
 
         showDialog("Добавить номер", DialogType.NUMBER_DIALOG, new PhoneNumber("", "Мобильный"))
                 .ifPresent(phoneNumber -> {
-                    if (!isValidPhoneNumber(phoneNumber.getNumber(), phoneNumber.getType(), null)) {
+                    if (!numberVerification(phoneNumber.getNumber(), phoneNumber.getType(), null)) {
                         showAlert("Ошибка", "Некорректный номер",
                                 "Номер не соответствует формату или слишком похож на существующий");
                         return;
@@ -273,7 +273,7 @@ public class PhoneBook {
                 });
     }
 
-    private boolean isValidPhoneNumber(String number, String type, Contact currentContact) {
+    private boolean numberVerification(String number, String type, Contact currentContact) {
         if (number == null || number.isEmpty()) {
             return false;
         }
@@ -436,7 +436,7 @@ public class PhoneBook {
 
         showDialog("Редактировать номер", DialogType.NUMBER_DIALOG, choosenumber)
                 .ifPresent(newPhoneNumber -> {
-                    if (!isValidPhoneNumber(newPhoneNumber.getNumber(),
+                    if (!numberVerification(newPhoneNumber.getNumber(),
                             newPhoneNumber.getType(),
                             choosecontact)) {
                         showAlert("Ошибка", "Некорректный номер",
