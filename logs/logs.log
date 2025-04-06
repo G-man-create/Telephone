@@ -1612,3 +1612,222 @@ javafx.fxml.LoadException: FXCollections is not a valid type.
 02:51:27.601 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber
 02:51:29.761 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 213123123 (тип: Мобильный)
 02:51:29.769 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный номер телефона: 213123123 для типа Мобильный
+16:58:51.409 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+16:58:52.684 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+16:58:52.684 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+16:58:52.750 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+16:58:52.750 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+16:58:52.758 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+16:58:52.759 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+16:58:52.759 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@d58dee1
+16:58:52.760 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+16:58:52.760 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+16:58:53.914 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+16:58:57.696 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber
+16:58:59.390 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление номера с помощью метода removeNumber
+16:58:59.399 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Номер телефона успешно удален
+16:58:59.399 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+16:58:59.399 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+16:58:59.402 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+16:58:59.403 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение изменения
+16:58:59.859 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление номера с помощью метода removeNumber
+16:58:59.861 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Номер телефона успешно удален
+16:58:59.861 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+16:58:59.861 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+16:58:59.862 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+16:58:59.862 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение изменения
+16:59:00.533 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление номера с помощью метода removeNumber
+16:59:00.533 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Номер телефона успешно удален
+16:59:00.533 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+16:59:00.535 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+16:59:00.535 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+16:59:00.535 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение изменения
+16:59:02.028 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+16:59:02.028 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+16:59:11.791 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757885 (тип: Мобильный)
+16:59:11.797 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный или дублирующийся номер телефона: 89319757885 для типа Мобильный
+16:59:17.323 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+16:59:17.323 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+16:59:25.847 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 79319757885 (тип: Мобильный)
+16:59:25.854 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный или дублирующийся номер телефона: 79319757885 для типа Мобильный
+17:01:31.688 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+17:01:32.624 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+17:01:32.625 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+17:01:32.685 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+17:01:32.685 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+17:01:32.692 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+17:01:32.693 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+17:01:32.693 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@d58dee1
+17:01:32.693 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+17:01:32.693 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+17:01:33.833 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+17:01:34.899 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:01:34.899 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:01:41.397 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757885 (тип: Мобильный)
+17:01:41.408 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный или дублирующийся номер телефона: 89319757885 для типа Мобильный
+17:01:43.986 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:01:43.986 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:01:56.068 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 9319757885 (тип: Мобильный)
+17:01:56.077 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный или дублирующийся номер телефона: 9319757885 для типа Мобильный
+17:02:00.738 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:02:00.738 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:02:06.246 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 79319757885 (тип: Мобильный)
+17:02:06.253 [JavaFX Application Thread] WARN  program.telephone.PhoneBook - Некорректный или дублирующийся номер телефона: 79319757885 для типа Мобильный
+17:03:04.099 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+17:03:05.121 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+17:03:05.122 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+17:03:05.174 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+17:03:05.174 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+17:03:05.180 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+17:03:05.181 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+17:03:05.181 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@d58dee1
+17:03:05.181 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+17:03:05.181 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+17:03:06.326 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+17:03:07.622 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:03:07.622 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:03:13.486 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757885 (тип: Мобильный)
+17:03:18.568 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:03:18.568 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:03:24.590 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757885 (тип: Мобильный)
+17:03:35.967 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Редактирование номера телефона с помощью метода editnumber
+17:03:37.409 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление номера с помощью метода removeNumber
+17:03:43.088 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Удаление номера с помощью метода removeNumber
+17:03:43.088 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Номер телефона успешно удален
+17:03:43.088 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:03:43.090 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:03:43.091 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+17:03:43.092 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение изменения
+17:03:45.183 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:03:45.184 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:03:52.027 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757885 (тип: Мобильный)
+17:03:52.034 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 89319757885 (тип: Мобильный)
+17:03:52.034 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:03:52.035 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:03:52.036 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+17:03:53.854 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:03:53.855 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:04:02.542 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле. Введены недопустимые символы: '8=9319757885'
+17:04:04.487 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 79319757885 (тип: Мобильный)
+17:04:07.199 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:04:07.199 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:04:15.816 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757886 (тип: Мобильный)
+17:04:18.810 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:04:18.810 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:04:28.548 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757884 (тип: Мобильный)
+17:06:38.212 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+17:06:39.220 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+17:06:39.221 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+17:06:39.284 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+17:06:39.284 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+17:06:39.295 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+17:06:39.295 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+17:06:39.296 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@d58dee1
+17:06:39.296 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+17:06:39.296 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+17:06:40.436 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+17:06:41.228 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:06:41.228 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:06:49.145 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757886 (тип: Мобильный)
+17:06:53.411 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:06:53.411 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:07:01.849 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757889 (тип: Мобильный)
+17:07:21.947 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:07:21.948 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:07:29.289 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757881 (тип: Мобильный)
+17:08:22.395 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+17:08:23.402 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+17:08:23.402 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+17:08:23.455 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+17:08:23.455 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Загрузка данных с помощью метода loadContacts
+17:08:23.462 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Успешная загрузка
+17:08:23.463 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+17:08:23.463 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@5b3c7dfd
+17:08:23.463 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+17:08:23.463 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+17:08:24.612 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+17:08:24.697 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:08:26.442 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:08:26.443 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:08:51.298 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89319757884 (тип: Мобильный)
+17:08:51.310 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 89319757884 (тип: Мобильный)
+17:08:51.310 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:08:51.311 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:08:51.313 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+17:08:53.417 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:08:53.417 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:09:03.556 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 79319757885 (тип: Мобильный)
+17:10:05.895 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:10:05.895 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:10:11.027 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 43243244 (тип: Домашний)
+17:10:32.148 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:10:32.148 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:10:34.749 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:10:34.749 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:10:38.740 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 321341233435 (тип: Рабочий)
+17:10:40.071 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:10:40.071 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:10:45.452 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 345465764556352324 (тип: Рабочий)
+17:10:47.139 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:10:47.139 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:10:56.994 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:10:56.994 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:10.168 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 434352562341 (тип: Мобильный)
+17:11:12.035 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:11:12.035 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:14.934 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 43435256234 (тип: Мобильный)
+17:11:16.696 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:11:16.697 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:20.148 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 4343525623 (тип: Мобильный)
+17:11:22.759 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:11:22.759 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:26.479 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 234567807689576767 (тип: Мобильный)
+17:11:28.729 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:11:28.729 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:37.821 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле. Введены недопустимые символы: 'ц'
+17:11:37.867 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле. Введены недопустимые символы: 'й'
+17:11:40.883 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 324324355 (тип: Домашний)
+17:11:42.392 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:11:42.392 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:49.337 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 65743784 (тип: Мобильный)
+17:11:52.051 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:11:52.051 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:11:54.365 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле. Введены недопустимые символы: '56564у'
+17:12:08.623 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 738291 (тип: Мобильный)
+17:12:14.305 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:12:14.305 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:12:24.090 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 892132 (тип: Домашний)
+17:12:24.095 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 892132 (тип: Домашний)
+17:12:24.097 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:12:24.097 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:12:24.098 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+17:12:33.822 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:12:33.822 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:12:41.980 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 8342392321232 (тип: Рабочий)
+17:12:44.170 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:12:44.170 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:12:52.957 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 7823123244123 (тип: Мобильный)
+17:12:54.404 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:12:54.404 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:12:57.718 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 7456456345345 (тип: Мобильный)
+17:13:37.400 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:13:37.400 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:13:43.987 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 8986453535 (тип: Другой)
+17:13:43.992 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 8986453535 (тип: Другой)
+17:13:43.992 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:13:43.993 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:13:43.993 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+17:13:44.934 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:13:44.935 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:13:48.893 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 4545645656 (тип: Другой)
+17:13:48.898 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 4545645656 (тип: Другой)
+17:13:48.899 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:13:48.899 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:13:48.899 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл
+17:14:02.858 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Добавление номера с помощью метода addNumber
+17:14:02.859 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона:  (тип: Мобильный)
+17:14:23.064 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 89343456 (тип: Рабочий)
+17:14:23.069 [JavaFX Application Thread] DEBUG program.telephone.Contact - Добавлен номер телефона: 89343456 (тип: Рабочий)
+17:14:23.070 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов с помощью метода saveContacts
+17:14:23.070 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Сохранение контактов в файл
+17:14:23.071 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Контакты успешно сохранены в файл

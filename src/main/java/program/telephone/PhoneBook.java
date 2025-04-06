@@ -229,12 +229,10 @@ public class PhoneBook {
         logger.info("Удаление контакта с помощью метода removeContact");
         Contact choosecontact = contactData.getSelectionModel().getSelectedItem();
         if (choosecontact != null) {
-            // Удаляем контакт из ObservableList
             contacts.remove(choosecontact);
-            // Очищаем selection, чтобы обновить numberData
             contactData.getSelectionModel().clearSelection();
             saveContacts();
-            logger.debug("Контакт успешно удален");
+            logger.info("Контакт успешно удален");
         }
     }
     /**
@@ -256,12 +254,9 @@ public class PhoneBook {
 
         showDialog("Добавить номер", DialogType.NUMBER_DIALOG, new PhoneNumber("", "Мобильный"))
                 .ifPresent(phoneNumber -> {
-                    // Проверка номера в зависимости от типа
-                    if (!isValidPhoneNumber(phoneNumber.getNumber(), phoneNumber.getType())) {
-                        logger.warn("Некорректный номер телефона: {} для типа {}",
-                                phoneNumber.getNumber(), phoneNumber.getType());
+                    if (!isValidPhoneNumber(phoneNumber.getNumber(), phoneNumber.getType(), null)) {
                         showAlert("Ошибка", "Некорректный номер",
-                                "Номер не соответствует формату для выбранного типа");
+                                "Номер не соответствует формату или слишком похож на существующий");
                         return;
                     }
 
@@ -279,29 +274,48 @@ public class PhoneBook {
                 });
     }
 
-    // Метод для проверки номера телефона в зависимости от типа
-    private boolean isValidPhoneNumber(String number, String type) {
+    private boolean isValidPhoneNumber(String number, String type, Contact currentContact) {
         if (number == null || number.isEmpty()) {
             return false;
         }
 
-        // Удаляем все нецифровые символы для проверки
         String cleanNumber = number.replaceAll("[^0-9]", "");
 
+        boolean formatValid;
         switch(type) {
             case "Мобильный":
-                // Проверяем что номер начинается с 7 или 8 и имеет 11 цифр
-                return cleanNumber.matches("^[78]\\d{10}$");
+                formatValid = cleanNumber.matches("^[78]\\d{10}$");
+                break;
             case "Домашний":
-                // Домашние номера обычно короче, проверяем 6-7 цифр
-                return cleanNumber.matches("^\\d{6,7}$");
+                formatValid = cleanNumber.matches("^\\d{6,7}$");
+                break;
             case "Рабочий":
-                // Рабочие номера могут быть длиннее
-                return cleanNumber.matches("^\\d{6,11}$");
+                formatValid = cleanNumber.matches("^\\d{6,11}$");
+                break;
             default:
-                // Для других типов применяем общие правила
-                return cleanNumber.matches("^\\d{6,11}$");
+                formatValid = cleanNumber.matches("^\\d{6,11}$");
         }
+
+        if (!formatValid) {
+            return false;
+        }
+
+        String numberWithoutFirstDigit = cleanNumber.substring(1);
+        for (Contact contact : contacts) {
+            if (contact == currentContact) {
+                continue;
+            }
+
+            for (PhoneNumber existingNumber : contact.getPhoneNumbers()) {
+                String existingCleanNumber = existingNumber.getNumber().replaceAll("[^0-9]", "");
+                if (existingCleanNumber.length() == cleanNumber.length() &&
+                        existingCleanNumber.substring(1).equals(numberWithoutFirstDigit)) {
+                    return false; // Найден похожий номер
+                }
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -423,12 +437,11 @@ public class PhoneBook {
 
         showDialog("Редактировать номер", DialogType.NUMBER_DIALOG, choosenumber)
                 .ifPresent(newPhoneNumber -> {
-                    // Проверка номера
-                    if (!isValidPhoneNumber(newPhoneNumber.getNumber(), newPhoneNumber.getType())) {
-                        logger.warn("Некорректный номер телефона: {} для типа {}",
-                                newPhoneNumber.getNumber(), newPhoneNumber.getType());
+                    if (!isValidPhoneNumber(newPhoneNumber.getNumber(),
+                            newPhoneNumber.getType(),
+                            choosecontact)) {
                         showAlert("Ошибка", "Некорректный номер",
-                                "Номер не соответствует формату для выбранного типа");
+                                "Номер не соответствует формату или слишком похож на существующий");
                         return;
                     }
 
