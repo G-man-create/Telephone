@@ -2080,3 +2080,14 @@ javafx.fxml.LoadException: FXCollections is not a valid type.
 11:49:19.322 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
 11:49:20.448 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
 11:49:28.765 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+12:47:16.151 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+12:47:18.044 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+12:47:18.044 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+12:47:18.097 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+12:47:18.104 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+12:47:18.105 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@2ef6efdc
+12:47:18.105 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+12:47:18.105 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+12:47:19.249 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена
+12:55:13.531 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+12:55:15.187 [JavaFX Application Thread] INFO  program.telephone.Menu - Завершение работы приложения
