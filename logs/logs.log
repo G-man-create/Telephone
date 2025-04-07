@@ -2010,3 +2010,14 @@ javafx.fxml.LoadException: FXCollections is not a valid type.
 18:34:02.699 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле. Введены недопустимые символы: 'ф'
 18:34:02.700 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Неправильный ввод в текстовом поле. Введены недопустимые символы: 'ы'
 18:34:04.160 [JavaFX Application Thread] DEBUG program.telephone.PhoneNumber - Создан новый номер телефона: 31241234231 (тип: Мобильный)
+23:55:11.014 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+23:55:12.533 [JavaFX Application Thread] INFO  program.telephone.Menu - Завершение работы приложения
+00:35:26.288 [JavaFX Application Thread] INFO  program.telephone.Main - Запуск приложения Телефонный справочник
+00:35:27.663 [JavaFX Application Thread] INFO  program.telephone.Menu - Открытие телефонной книги
+00:35:27.664 [JavaFX Application Thread] DEBUG program.telephone.Menu - Загрузка FXML: telephone.fxml
+00:35:27.726 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация данных о контактах
+00:35:27.733 [JavaFX Application Thread] INFO  program.telephone.PhoneBook - Инициализация успешно завершена
+00:35:27.733 [JavaFX Application Thread] DEBUG program.telephone.PhoneBook - Установка контроллера Menu: program.telephone.Menu@1b41eca2
+00:35:27.733 [JavaFX Application Thread] DEBUG program.telephone.Menu - Установлен контроллер для телефонной книги
+00:35:27.734 [JavaFX Application Thread] DEBUG program.telephone.Menu - Запуск анимации перехода между сценами
+00:35:28.870 [JavaFX Application Thread] DEBUG program.telephone.Menu - Анимация перехода завершена

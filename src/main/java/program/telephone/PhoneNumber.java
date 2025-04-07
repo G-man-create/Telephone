@@ -10,6 +10,15 @@ import org.apache.logging.log4j.Logger;
  * @see Serializable
  */
 class PhoneNumber implements Serializable {
+    /**
+     * Логгер для класса PhoneNumber.
+     * <p>
+     * Используется для записи информационных сообщений, предупреждений и ошибок,
+     * связанных с обработкой телефонных номеров.
+     *
+     * @see org.apache.logging.log4j.Logger
+     * @see org.apache.logging.log4j.LogManager
+     */
     private static final Logger logger = LogManager.getLogger(PhoneNumber.class);
     /** Номер телефона в строковом формате
      */
@@ -18,9 +27,12 @@ class PhoneNumber implements Serializable {
      */
     private String type;
     /**
-     * Создает новый экземпляр номера телефона.
-     * @see #getNumber()
-     * @see #getType()
+     * Создает новый объект телефонного номера с указанными параметрами.
+     *
+     * @param number строковое представление телефонного номера
+     * @param type   тип номера (например: "Мобильный", "Домашний", "Рабочий")
+     * @throws IllegalArgumentException если номер не соответствует допустимому формату
+     * @throws NullPointerException если number или type равны null
      */
     public PhoneNumber(String number, String type) {
         this.number = number;

@@ -54,3 +54,7 @@ sourceSets {
 tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
 }
+tasks.withType(Javadoc) {
+  source = sourceSets.main.allJava
+  options.memberLevel = JavadocMemberLevel.PRIVATE
+}

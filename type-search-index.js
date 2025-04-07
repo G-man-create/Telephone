@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"program.telephone","l":"Contact"},{"p":"program.telephone","l":"PhoneBook.DialogType"},{"p":"program.telephone","l":"Main"},{"p":"program.telephone","l":"Menu"},{"p":"program.telephone","l":"PhoneBook"},{"p":"program.telephone","l":"PhoneNumber"}];updateSearchResults();

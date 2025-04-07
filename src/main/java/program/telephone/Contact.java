@@ -15,6 +15,19 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class Contact implements Serializable {
+    /**
+     * Логгер для класса Contact.
+     * <p>
+     * Используется для логирования всех операций, связанных с контактом:
+     * <ul>
+     *   <li>Создание и изменение контакта</li>
+     *   <li>Добавление/удаление телефонных номеров</li>
+     *   <li>Ошибки валидации данных</li>
+     * </ul>
+     *
+     * @see org.apache.logging.log4j.Logger
+     * @see org.apache.logging.log4j.LogManager
+     */
     private static final Logger logger = LogManager.getLogger(Contact.class);
     /**
      * Полное имя контакта.
@@ -50,6 +63,9 @@ public class Contact implements Serializable {
     }
     /**
      * Возвращает список телефонных номеров контакта.
+     *
+     * @return список объектов PhoneNumber, связанных с этим контактом.
+     *         Если номеров нет, возвращается пустой список (не null).
      */
     public List<PhoneNumber> getPhoneNumbers() {
         return phoneNumbers;

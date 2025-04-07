@@ -1,40 +1,38 @@
 package program.telephone;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
-import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 /**
  * Этот класс основным который занимается созданием, удалением редактированием классов, также сохранением их в бинарный файл
  */
 public class PhoneBook {
+    /** Логгер для класса PhoneBook. */
     private static final Logger logger = LogManager.getLogger(PhoneBook.class);
-
+    /** Контроллер меню приложения. */
     private Menu menuController;
-    @FXML
-    private ResourceBundle resources;
-    @FXML
-    private URL location;
+    /** searchField для поиска. */
     @FXML
     private TextField searchField;
+    /** ListView для отображения списка контактов. */
     @FXML
     private ListView<Contact> contactData;
+    /** ListView для отображения списка номеров. */
     @FXML
     private ListView<PhoneNumber> numberData;
-
+    /** Наблюдаемый список контактов. */
     private ObservableList<Contact> contacts;
-
+    /** Имя файла для хранения данных телефонной книги. */
     private static final String DATA_BIN  = "phonebook.bin";
     /**
      * Инициализирует файл данных, если он не существует.
@@ -68,7 +66,6 @@ public class PhoneBook {
      * <p>В случае успешного выполнения логируется информационное сообщение. При возникновении ошибок
      * информация об исключении записывается в лог.
      *
-     * @throws Exception если произошла ошибка при инициализации файла данных или загрузке контактов
      * @see PhoneBook#initDataFile()
      * @see #loadContacts()
      */
@@ -128,11 +125,11 @@ public class PhoneBook {
         }
     }
     /**
-     * Загружает список контактов из файла DATA_BIN.
-     * Если файл не существует или произошла ошибка при чтении, возвращает пустой ObservableList.
+     * Возвращает список контактов в виде ObservableList.
+     * <p>
+     * Возвращаемый список автоматически обновляет UI при изменениях.
      *
-     * @return ObservableList<Contact> - список контактов, загруженных из файла,
-     *         или пустой список в случае ошибки
+     * @return ObservableList объектов {@link Contact}, содержащая все контакты книги
      */
     @FXML
     private ObservableList<Contact> loadContacts() {
@@ -151,14 +148,16 @@ public class PhoneBook {
         NUMBER_DIALOG
     }
     /**
-     * Показывает диалоговое окно указанного типа с заданным заголовком и начальными данными.
+     * Отображает диалоговое окно с заданными параметрами.
      *
-     * @param <T> тип возвращаемых данных (String для контактов, PhoneNumber для номеров)
+     * @param <T> тип данных, возвращаемых диалогом (должен соответствовать типу initialData)
      * @param title заголовок диалогового окна
-     * @param type тип диалогового окна (CONTACT_DIALOG или NUMBER_DIALOG)
-     * @param initialData начальные данные для отображения в диалоге
-     * @return Optional<T> - содержит результат диалога, если пользователь нажал OK,
-     *         или пустой Optional, если пользователь отменил диалог или произошла ошибка
+     * @param type тип диалога (определяет его вид и поведение)
+     * @param initialData начальные данные для отображения в диалоге (может быть null)
+     * @return {@code Optional<T>}, содержащий результат если пользователь подтвердил действие,
+     *         или {@code Optional.empty()} если диалог был отменён
+     * @throws IllegalArgumentException если type равен null
+     * @see DialogType
      */
     private <T> Optional<T> showDialog(String title, DialogType type, T initialData) {
         try {
@@ -263,19 +262,7 @@ public class PhoneBook {
                 });
     }
     /**
-     * Удаляет выбранный контакт из списка контактов.
-     *
-     * <p>Метод выполняет следующие действия:
-     * <ol>
-     *   <li>Получает выбранный контакт из selection model таблицы контактов</li>
-     *   <li>Если контакт выбран (не null), удаляет его из списка контактов</li>
-     *   <li>Сбрасывает выделение в таблице контактов</li>
-     *   <li>Сохраняет обновленный список контактов</li>
-     *   <li>Логирует успешное выполнение операции</li>
-     * </ol>
-     *
-     * @throws SecurityException если возникли проблемы с сохранением контактов после удаления
-     * @throws IOException если возникли проблемы с сохранением контактов после удаления
+     * Сохраняет контакты в хранилище.
      */
     @FXML
     private void removeContact() {
@@ -298,7 +285,6 @@ public class PhoneBook {
      * 4. Проверяет корректность введенного номера
      * 5. Проверяет, не существует ли уже такой номер у контакта
      * 6. Если проверки пройдены, добавляет номер к контакту и сохраняет изменения
-     * @implNote Логирует процесс добавления номера и возможные ошибки
      * @see #showAlert(String, String, String)
      * @see #saveContacts()
      */
@@ -397,8 +383,6 @@ public class PhoneBook {
      * Если контакт и номер телефона выбраны, метод удаляет номер из списка номеров контакта
      * и обновляет отображаемые данные. После успешного удаления сохраняет изменения.
      * В случае возникновения ошибки логирует её и пробрасывает исключение дальше.
-     *
-     * @throws Exception если произошла ошибка во время удаления номера телефона или сохранения изменений
      */
     @FXML
     private void removeNumber() {
@@ -430,8 +414,6 @@ public class PhoneBook {
      * Результат сортировки сохраняется в {@code contactData} после очистки предыдущего списка.
      * </p>
      *
-     * @throws Exception если произошла ошибка во время сортировки контактов.
-     *                  Ошибка логируется перед повторным выбросом исключения.
      * @see Contact#getName()
      * @see Comparator#comparing(java.util.function.Function)
      * @see FXCollections#observableArrayList(java.util.Collection)
@@ -478,11 +460,6 @@ public class PhoneBook {
      * Процесс поиска логируется на уровне INFO, а детали совпадений для каждого контакта
      * логируются на уровне TRACE. В случае возникновения ошибок они логируются на уровне ERROR.
      * </p>
-     *
-     * @implNote Поиск выполняется в отдельном потоке с использованием Stream API.
-     *           Регистр символов не учитывается при поиске по имени, но учитывается при поиске по номеру телефона.
-     *           Пробелы в начале и конце поискового запроса автоматически удаляются.
-     *
      * @see Contact
      * @see Contact#getName()
      * @see Contact#getPhoneNumbers()
@@ -619,7 +596,12 @@ public class PhoneBook {
         });
     }
     /**
-     *  Этот метод обеспечивает связь между телефонной книгой и главным меню приложения
+     * Устанавливает контроллер меню для текущего класса.
+     *
+     * @param menuController экземпляр контроллера меню, который будет использоваться
+     *                      для взаимодействия с элементами меню приложения.
+     *                      Не должен быть null.
+     * @throws IllegalArgumentException если переданный menuController равен null
      */
     public void setMenu(Menu menuController) {
         logger.debug("Установка контроллера Menu: {}", menuController);
@@ -629,7 +611,17 @@ public class PhoneBook {
         }
     }
     /**
-     *  Обрабатывает возврат пользователя в главное меню из телефонной книги
+     * Обрабатывает возврат в главное меню приложения.
+     *
+     * <p>Метод выполняет следующие действия:
+     * <ol>
+     *   <li>Логирует попытку перехода в меню</li>
+     *   <li>Проверяет наличие инициализированного контроллера меню</li>
+     *   <li>При успешной проверке переключает сцену на главное меню</li>
+     *   <li>Логирует результат операции</li>
+     * </ol>
+     * <p>В случае ошибки метод:
+     * @see Menu#switchScene(String)
      */
     @FXML
     private void onBackToMenu() {

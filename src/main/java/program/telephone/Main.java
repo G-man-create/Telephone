@@ -10,13 +10,18 @@ import org.apache.logging.log4j.Logger;
  * Главный класс приложения, запускающий JavaFX приложение.
  */
 public class Main extends Application {
-
+    /**
+     * Логгер для работы с меню приложения.
+     * <p>
+     * Используется для записи событий взаимодействия с пользовательским меню.
+     */
     private static final Logger logger = LogManager.getLogger(Main.class);
     @Override
     /**
-     * Метод инициализации JavaFX приложения.
-     * @param stage основной контейнер приложения
-     * @throws Exception в случае ошибки при запуске приложения
+     * Устанавливает основную сцену (Stage) для данного класса.
+     *
+     * @param stage объект Stage (сцена JavaFX), который будет использоваться
+     *              для отображения диалоговых окон и других UI-элементов
      */
     public void start(Stage stage) throws Exception {
         logger.info("Запуск приложения Телефонный справочник");
