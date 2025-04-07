@@ -144,7 +144,9 @@ public class PhoneBook {
      * Перечисление типов диалоговых окон.
      */
     private enum DialogType {
+        /** Диалог для работы с контактами. */
         CONTACT_DIALOG,
+
         NUMBER_DIALOG
     }
     /**
